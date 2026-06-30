@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Slider</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#ffefef;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+padding:30px 0;
+}
+
+.title{
+text-align:center;
+font-size:28px;
+font-weight:700;
+color:#024069;
+margin-bottom:25px;
+}
+
+.slider{
+overflow:hidden;
+position:relative;
+}
+
+.slider::before,
+.slider::after{
+content:"";
+position:absolute;
+top:0;
+width:120px;
+height:100%;
+z-index:2;
+}
+
+.slider::before{
+left:0;
+background:linear-gradient(to left,rgba(255,239,239,0),#ffefef);
+}
+
+.slider::after{
+right:0;
+background:linear-gradient(to right,rgba(255,239,239,0),#ffefef);
+}
+
+.slide-track{
+display:flex;
+width:max-content;
+animation:scroll 45s linear infinite;
+}
+
+.slide-track:hover{
+animation-play-state:paused;
+}
+
+.slide{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:0 40px;
+}
+
+.slide img{
+height:65px;
+width:auto;
+filter:grayscale(100%);
+opacity:.8;
+transition:.3s;
+}
+
+.slide img:hover{
+filter:none;
+opacity:1;
+transform:scale(1.08);
+}
+
+@keyframes scroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="title">
+Współpracuję z renomowanymi towarzystwami ubezpieczeniowymi
+</div>
+
+<div class="slider">
+
+<div class="slide-track">
+
+<!-- TU DODAMY LOGOTYPY -->
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
